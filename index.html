@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="phone-rect">
+    <div class="container">
+      <header>
+        <h1>Weather App</h1>
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      </header>
+      <div id="favorites-bar"></div>
+      <form id="search-form">
+        <input type="text" id="city-input" placeholder="Enter city name" autocomplete="off"/>
+        <button type="submit" id="search-btn">Search</button>
+        <button type="button" id="fav-btn" title="Add to Favorites">★</button>
+      </form>
+      <div id="error-container"></div>
+      <div id="loading" class="hidden">Loading...</div>
+      <div id="weather-container"></div>
+      <div id="hourly-container"></div>
+      <div style="text-align:center;margin:10px 0;">
+        <label for="forecast-sort">Sort forecast by: </label>
+        <select id="forecast-sort" style="padding:6px 12px;border-radius:8px;">
+          <option value="date">Date (default)</option>
+          <option value="temp-asc">Temperature (Low to High)</option>
+          <option value="temp-desc">Temperature (High to Low)</option>
+        </select>
+      </div>
+      <div id="forecast-container"></div>
+      <div style="text-align:center;margin:20px 0;">
+        <button id="loadMoreForecastBtn" style="padding:8px 24px;border-radius:16px;font-size:1rem;background:#0288d1;color:#fff;border:none;cursor:pointer;display:none;">Load More</button>
+      </div>
+    </div>
+    <footer>
+      <p>Powered by <a href="https://openweathermap.org/" target="_blank">OpenWeather</a></p>
+    </footer>
+  </div>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
